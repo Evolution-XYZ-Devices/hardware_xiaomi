@@ -23,7 +23,7 @@ int main() {
 
     const std::string instance = std::string() + Lights::descriptor + "/default";
     binder_status_t status = AServiceManager_addService(lights->asBinder().get(), instance.c_str());
-    CHECK(status == STATUS_OK);
+    CHECK_EQ(status, STATUS_OK);
 
     ABinderProcess_joinThreadPool();
     return EXIT_FAILURE;  // should not reach
