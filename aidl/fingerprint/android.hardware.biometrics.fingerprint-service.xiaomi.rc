@@ -6,3 +6,4 @@ service vendor.fingerprint-default /vendor/bin/hw/android.hardware.biometrics.fi
     user system
     group system input uhid
     shutdown critical
+    task_profiles ProcessCapacityHigh MaxPerformance
